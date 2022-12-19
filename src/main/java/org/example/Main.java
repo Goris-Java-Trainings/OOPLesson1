@@ -1,11 +1,14 @@
 package org.example;
 
+import human.Doctor;
 import human.Human;
+import human.Programmer;
+import human.Worker;
 
 public class Main {
     public static void main(String[] args) {
         // instantiate of a new Human
-        Human humanInstance = new Human(-665, "bhfrbejhfbne"); // constructor
+//        Human humanInstance = new Human(-665, "bhfrbejhfbne"); // constructor
 
 //        humanInstance.printAge();
 //        humanInstance.setFirstName("bhcjrh$e");
@@ -41,6 +44,15 @@ public class Main {
 //        d = (byte)dd;  // unboxing
         in = f;          // autoboxing
 
-        System.out.println(in);
+//        System.out.println(in);
+
+        Human human = new Worker("MALE", 22, "Jack", "Daniels", "AR432922", "Abovyan 2");
+
+        System.out.println("Doctor name: " + human.getFullName());
+//        Worker worker = new Worker("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
+
+        human = new Programmer("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
+
+        System.out.println("Programmer name: " + human.getFullName());
     }
 }

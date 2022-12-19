@@ -4,9 +4,11 @@ import org.example.Main;
 
 public class Human {
 
-    // behavior
     // OOP principles
     // 1. Encapsulation -> capsula       code + behavior
+    // 2. Inheritance
+    // 3. Polymorphism   (Having Inheritance)
+    // 4. Abstraction
 
     private String firstName; // null
 
@@ -18,19 +20,23 @@ public class Human {
 
     private String passportNumber;
 
-    /*// default constructor
+    // default constructor
     public Human() {
         // constructor
         System.out.println("Created a new human!");
+    }
+
+    /*public Human() {
+        System.out.println("Create a new Human");
     }*/
 
-    public Human(int ageParameter, String passportNumber) {
+    /*public Human(int ageParameter, String passportNumber) {
         this.passportNumber = passportNumber;
         if (ageParameter >= 0) {
             this.age = ageParameter;
         }
 //        Main.main(new String[7]);
-    }
+    }*/
 
     public Human(String gender, int ageParameter, String firstName, String lastName, String passportNumber) {
         this.age = ageParameter + 6;
@@ -38,6 +44,8 @@ public class Human {
         this.firstName = firstName;
         this.gender = gender;
         this.passportNumber = passportNumber;
+
+//        System.out.println("Create a new Human");
     }
 
     public void printAge() {
@@ -57,15 +65,18 @@ public class Human {
         System.out.println(getFullName() + " just walked " + distanceWithCm + " km");
     }
 
-
-    private String getFullName() {
-        return this.firstName + " " + this.lastName;
+    protected String getFullName() {
+        return this.firstName + ", " + this.lastName;
     }
 
     // accessor methods: getter, setter
 
     public String getFirstName() {
-        return "[NAME]: " + this.firstName;
+        return this.firstName;
+    }
+
+    public String getLastName() {
+        return this.lastName;
     }
 
     public void setFirstName(String firstName) {
