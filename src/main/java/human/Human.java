@@ -65,7 +65,7 @@ public class Human {
         System.out.println(getFullName() + " just walked " + distanceWithCm + " km");
     }
 
-    protected String getFullName() {
+    public  String getFullName() {
         return this.firstName + ", " + this.lastName;
     }
 
