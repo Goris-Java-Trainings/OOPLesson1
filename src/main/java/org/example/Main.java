@@ -1,5 +1,7 @@
 package org.example;
 
+import enums.Currency;
+import enums.WeakDay;
 import human.Doctor;
 import human.Human;
 import human.Programmer;
@@ -7,7 +9,7 @@ import human.Worker;
 
 public class Main {
     public static void main(String[] args) {
-        // instantiate of a new Human
+        /*// instantiate of a new Human
 //        Human humanInstance = new Human(-665, "bhfrbejhfbne"); // constructor
 
 //        humanInstance.printAge();
@@ -50,9 +52,20 @@ public class Main {
 
         System.out.println("Doctor name: " + human.getFullName());
 //        Worker worker = new Worker("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
+*/
+        Programmer programmer = new Programmer("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
 
-        human = new Programmer("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
+//        System.out.println("Programmer name: " + human.getFullName());
 
-        System.out.println("Programmer name: " + human.getFullName());
+//        System.out.println(programmer.a);
+
+        /*Doctor doctor = new Doctor("FEMALE", 56, "JAMES1", "BOND1", "AR8438922", "Abovyan 2");
+
+        System.out.println(WeakDay.SUNDAY.dayName);
+        System.out.println(WeakDay.SUNDAY.workingHours);*/
+
+        programmer.setSalary(1000);
+
+        System.out.println(programmer.payDaily(Currency.AED));
     }
 }

@@ -1,7 +1,5 @@
 package human;
 
-import org.example.Main;
-
 public class Human {
 
     // OOP principles
@@ -19,6 +17,10 @@ public class Human {
     private String gender = "UNKNOWN";
 
     private String passportNumber;
+
+    void sing(long duration) {
+
+    }
 
     // default constructor
     public Human() {
@@ -65,7 +67,7 @@ public class Human {
         System.out.println(getFullName() + " just walked " + distanceWithCm + " km");
     }
 
-    protected String getFullName() {
+    public String getFullName() {
         return this.firstName + ", " + this.lastName;
     }
 

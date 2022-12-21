@@ -2,6 +2,7 @@ package human;
 
 public class Worker extends Human {
     private String workAddress;
+    private long salary;
 
     public Worker() {
 
@@ -18,4 +19,13 @@ public class Worker extends Human {
 //        System.out.println("Create a new Worker");
 ////        super();
 //    }
+
+
+    public long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(long salary) {
+        this.salary = salary;
+    }
 }
