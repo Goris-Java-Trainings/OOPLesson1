@@ -3,12 +3,43 @@ package interfaces;
 import enums.Currency;
 
 public interface Payable {
+    // v1
     double payDaily(Currency currency);  // method definition
 
+    // v2
+    default double print(Currency currency, int a) {
+        // default implementation
+        // a == 4
+        if(currency.equals(Currency.AED)) {
+            return 9.0;
+        }
+        return 10.0;
+    }
+
+    // v2
+    static double copy(Currency currency, int a) {
+        // default implementation
+        // a == 4
+        if(currency.equals(Currency.AED)) {
+            return 9.0;
+        }
+        return 10.0;
+    }
+
+    // v1
     void payMonthly();
 
+    //v1
     void payYearly();
 
-    // TODO there are also 'default' and 'static' methods
-    // TODO which we will cover in next Lesson
+    // changes in existing implementations
+    // Backward compatibility
+
+    // TODO equals and hashcode methods of Object.java class
+    // TODO abstract methods in interface
+    // TODO static class
+    // TODO pointer, reference
+    // TODO final class, methods
+
+    // primitives | reference
 }

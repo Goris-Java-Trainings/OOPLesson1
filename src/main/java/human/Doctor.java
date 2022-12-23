@@ -1,12 +1,12 @@
 package human;
 
 import enums.Currency;
-import human.Worker;
 import interfaces.Payable;
+import interfaces.Singable;
 import org.example.Mobile;
 //import org.example.Mobile;
 
-public class Doctor extends Worker implements Payable { // IS-A   (Inheritance)
+public class Doctor extends Worker implements Payable, Singable { // IS-A   (Inheritance)
     private Mobile mobile;  // HAS-A   (Composition)
     private int degree;
 
@@ -26,6 +26,11 @@ public class Doctor extends Worker implements Payable { // IS-A   (Inheritance)
     }
 
     @Override
+    public double print(Currency currency, int a) {
+        return Singable.super.println(currency, a);
+    }
+
+    @Override
     public void payMonthly() {
 
     }
@@ -33,5 +38,11 @@ public class Doctor extends Worker implements Payable { // IS-A   (Inheritance)
     @Override
     public void payYearly() {
 
+    }
+
+    @Override
+    public void sing(long duration) {
+        print(Currency.AFN, 4);
+//        Singable.copy(Currency.AFN, 6);
     }
 }

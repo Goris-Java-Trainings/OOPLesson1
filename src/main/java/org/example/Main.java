@@ -1,13 +1,11 @@
 package org.example;
 
-import enums.Currency;
-import enums.WeakDay;
-import human.Doctor;
 import human.Human;
-import human.Programmer;
 import human.Worker;
 
 public class Main {
+
+    // static method
     public static void main(String[] args) {
         /*// instantiate of a new Human
 //        Human humanInstance = new Human(-665, "bhfrbejhfbne"); // constructor
@@ -53,7 +51,7 @@ public class Main {
         System.out.println("Doctor name: " + human.getFullName());
 //        Worker worker = new Worker("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
 */
-        Programmer programmer = new Programmer("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
+//        Programmer programmer = new Programmer("MALE", 43, "JAMES", "BOND", "AR8438922", "Abovyan 1");
 
 //        System.out.println("Programmer name: " + human.getFullName());
 
@@ -63,9 +61,34 @@ public class Main {
 
         System.out.println(WeakDay.SUNDAY.dayName);
         System.out.println(WeakDay.SUNDAY.workingHours);*/
+/*
 
         programmer.setSalary(1000);
 
         System.out.println(programmer.payDaily(Currency.AED));
+
+        Payable p = new Doctor("FEMALE", 56, "JAMES1", "BOND1", "AR8438922", "Abovyan 2");
+*/
+
+        System.out.println(Human.age);
+        Human.printAge();
+
+//        Worker doctor = new Worker("FEMALE", 56, "JAMES1", "BOND1", "AR8438922", "Abovyan 2");
+
+        System.out.println(Worker.FIRST_HUMAN_EVER.getFullName());
+        Worker.FIRST_HUMAN_EVER.setFirstName("Eva");
+        System.out.println(Worker.FIRST_HUMAN_EVER.getFullName());
+
+        Human human1 = new Human();
+        Human human2 = new Human();
+
+        human1 = human2;
+
+        human2.setFirstName("aaaa");
+
+        System.out.println(human1.getFirstName());
+
+
+//        Worker.FIRST_HUMAN_EVER = human1;
     }
 }

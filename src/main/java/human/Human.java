@@ -8,11 +8,16 @@ public class Human {
     // 3. Polymorphism   (Having Inheritance)
     // 4. Abstraction
 
+    // static variable
+    public static Integer age = 76;
+
+    static {
+        System.out.println("This is a static block!");
+    }
+
     private String firstName; // null
 
     private String lastName;
-
-    private Integer age = 76;
 
     private String gender = "UNKNOWN";
 
@@ -41,20 +46,22 @@ public class Human {
     }*/
 
     public Human(String gender, int ageParameter, String firstName, String lastName, String passportNumber) {
-        this.age = ageParameter + 6;
+        this.age = ageParameter;
         this.lastName = lastName;
         this.firstName = firstName;
         this.gender = gender;
         this.passportNumber = passportNumber;
 
-//        System.out.println("Create a new Human");
+        System.out.println("Create a new Human");
     }
 
-    public void printAge() {
+    public static void printAge() {
         System.out.println(age);
     }
 
     public void walk(int distance, boolean b) {
+        System.out.println(age);
+        Human human = new Human();
         if (b) {
             System.out.println(getFullName() + " just walked " + distance + " km");
         } else {
@@ -68,6 +75,7 @@ public class Human {
     }
 
     public String getFullName() {
+//        walk(3,true);
         return this.firstName + ", " + this.lastName;
     }
 
