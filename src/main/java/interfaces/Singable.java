@@ -4,7 +4,10 @@ import enums.Currency;
 import human.Human;
 
 public interface Singable {
-    void sing(long duration);
+
+    public final int a = 76; // property
+
+//    public abstract void sing(int duration); // method
 
     default double print(Currency currency, int a) {
         // default implementation

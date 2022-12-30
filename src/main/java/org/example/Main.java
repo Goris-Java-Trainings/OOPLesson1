@@ -1,7 +1,15 @@
 package org.example;
 
+import car.Car;
+import car.impl.BMW;
+import enums.Currency;
+import human.Doctor;
 import human.Human;
+import human.Programmer;
 import human.Worker;
+import interfaces.Singable;
+
+import java.awt.*;
 
 public class Main {
 
@@ -69,7 +77,7 @@ public class Main {
 
         Payable p = new Doctor("FEMALE", 56, "JAMES1", "BOND1", "AR8438922", "Abovyan 2");
 */
-
+/*
         System.out.println(Human.age);
         Human.printAge();
 
@@ -77,18 +85,35 @@ public class Main {
 
         System.out.println(Worker.FIRST_HUMAN_EVER.getFullName());
         Worker.FIRST_HUMAN_EVER.setFirstName("Eva");
-        System.out.println(Worker.FIRST_HUMAN_EVER.getFullName());
+        System.out.println(Worker.FIRST_HUMAN_EVER.getFullName());*/
 
-        Human human1 = new Human();
-        Human human2 = new Human();
+        Human human1;
 
-        human1 = human2;
+        Doctor doctor = new Doctor("FEMALE", 56, "JAMES1_Dc", "BOND1_Dc", "AR8438922", "Abovyan 2");
 
-        human2.setFirstName("aaaa");
+//        System.out.println(human1.getFullName());
 
-        System.out.println(human1.getFirstName());
+        human1 = new Programmer("FEMALE", 56, "JAMES1_Pr", "BOND1_Pr", "AR8438922", "Abovyan 2");;
+
+        System.out.println(human1.getFullName());
+
+//        Human human2 = new Human();
+
+//        human1 = human2;
+
+//        human2.setFirstName("aaaa");
+
+//        System.out.println(human1.getFirstName());
 
 
 //        Worker.FIRST_HUMAN_EVER = human1;
+
+
+        doctor.print(Currency.AFN, 3);
+
+        Car car = new BMW(Color.BLACK);
+        car.drive();
+
+        Singable singable = new Doctor("FEMALE", 56, "JAMES1_Dc", "BOND1_Dc", "AR8438922", "Abovyan 2");
     }
 }

@@ -16,10 +16,6 @@ public class Doctor extends Worker implements Payable, Singable { // IS-A   (Inh
         Mobile mobile1 = new Mobile();
     }
 
-    void sing(double duration) {
-
-    }
-
     @Override
     public double payDaily(Currency currency) {
         return 0.0;
@@ -41,8 +37,7 @@ public class Doctor extends Worker implements Payable, Singable { // IS-A   (Inh
     }
 
     @Override
-    public void sing(long duration) {
-        print(Currency.AFN, 4);
-//        Singable.copy(Currency.AFN, 6);
+    public String getFullName() {
+        return "[Doctor]: " + getFirstName() + " " + getLastName();
     }
 }

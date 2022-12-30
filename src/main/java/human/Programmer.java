@@ -18,7 +18,7 @@ public class Programmer extends Worker implements Payable {
 
     @Override
     public String getFullName() {
-        return getFirstName() + " :: " + getLastName();
+        return getFirstName() + "]]]]]]]]] " + getLastName();
     }
 
     @Override

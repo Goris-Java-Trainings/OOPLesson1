@@ -23,9 +23,11 @@ public class Human {
 
     private String passportNumber;
 
-    void sing(long duration) {
+    final void sing(long duration) {
 
     }
+
+// protected static final byte methodName(...)
 
     // default constructor
     public Human() {
