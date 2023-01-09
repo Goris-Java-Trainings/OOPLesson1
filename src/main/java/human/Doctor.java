@@ -12,7 +12,6 @@ public class Doctor extends Worker implements Payable, Singable { // IS-A   (Inh
 
     public Doctor(String gender, int ageParameter, String firstName, String lastName, String passportNumber, String workAddress) {
         super(gender, ageParameter, firstName, lastName, passportNumber, workAddress);
-        System.out.println("Create a new Doctor: " + getFullName());
         Mobile mobile1 = new Mobile();
     }
 
@@ -34,10 +33,5 @@ public class Doctor extends Worker implements Payable, Singable { // IS-A   (Inh
     @Override
     public void payYearly() {
 
-    }
-
-    @Override
-    public String getFullName() {
-        return "[Doctor]: " + getFirstName() + " " + getLastName();
     }
 }

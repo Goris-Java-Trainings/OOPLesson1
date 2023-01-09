@@ -34,12 +34,9 @@ public interface Payable {
 
     // changes in existing implementations
     // Backward compatibility
-
-    // TODO final class, methods
-    // TODO abstract methods in interface
+    // TODO static class
 
     // TODO equals and hashcode methods of Object.java class
-    // TODO static class
     // TODO pointer, reference
 
     // primitives | reference

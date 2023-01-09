@@ -15,7 +15,7 @@ public class Worker extends Human {
     public Worker(String gender, int ageParameter, String firstName, String lastName, String passportNumber, String workAddress) {
         super(gender, ageParameter, firstName, lastName, passportNumber);
 //        super();
-        System.out.println("Complex Worker constructor");
+//        System.out.println("Complex Worker constructor");
         this.workAddress = workAddress;
     }
 

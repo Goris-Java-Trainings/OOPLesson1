@@ -12,7 +12,7 @@ public class Human {
     public static Integer age = 76;
 
     static {
-        System.out.println("This is a static block!");
+//        System.out.println("This is a static block!");
     }
 
     private String firstName; // null
@@ -54,31 +54,11 @@ public class Human {
         this.gender = gender;
         this.passportNumber = passportNumber;
 
-        System.out.println("Create a new Human");
+//        System.out.println("Create a new Human");
     }
 
     public static void printAge() {
         System.out.println(age);
-    }
-
-    public void walk(int distance, boolean b) {
-        System.out.println(age);
-        Human human = new Human();
-        if (b) {
-            System.out.println(getFullName() + " just walked " + distance + " km");
-        } else {
-            System.out.println(getFullName() + " just walked " + distance + " cm");
-        }
-    }
-
-    // method overloading
-    public void walk(int distanceWithCm) {
-        System.out.println(getFullName() + " just walked " + distanceWithCm + " km");
-    }
-
-    public String getFullName() {
-//        walk(3,true);
-        return this.firstName + ", " + this.lastName;
     }
 
     // accessor methods: getter, setter

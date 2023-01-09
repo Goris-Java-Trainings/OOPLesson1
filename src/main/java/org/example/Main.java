@@ -1,15 +1,7 @@
 package org.example;
 
 import car.Car;
-import car.impl.BMW;
-import enums.Currency;
-import human.Doctor;
-import human.Human;
 import human.Programmer;
-import human.Worker;
-import interfaces.Singable;
-
-import java.awt.*;
 
 public class Main {
 
@@ -87,15 +79,14 @@ public class Main {
         Worker.FIRST_HUMAN_EVER.setFirstName("Eva");
         System.out.println(Worker.FIRST_HUMAN_EVER.getFullName());*/
 
-        Human human1;
-
-        Doctor doctor = new Doctor("FEMALE", 56, "JAMES1_Dc", "BOND1_Dc", "AR8438922", "Abovyan 2");
-
+//        Human human1;
+//
+//        Doctor doctor = new Doctor("FEMALE", 56, "JAMES1_Dc", "BOND1_Dc", "AR8438922", "Abovyan 2");
+//
 //        System.out.println(human1.getFullName());
-
-        human1 = new Programmer("FEMALE", 56, "JAMES1_Pr", "BOND1_Pr", "AR8438922", "Abovyan 2");;
-
-        System.out.println(human1.getFullName());
+//
+//        human1 = new Programmer("FEMALE", 56, "JAMES1_Pr", "BOND1_Pr", "AR8438922", "Abovyan 2");
+        ;
 
 //        Human human2 = new Human();
 
@@ -109,11 +100,22 @@ public class Main {
 //        Worker.FIRST_HUMAN_EVER = human1;
 
 
-        doctor.print(Currency.AFN, 3);
+        /*doctor.print(Currency.AFN, 3);
 
         Car car = new BMW(Color.BLACK);
         car.drive();
 
-        Singable singable = new Doctor("FEMALE", 56, "JAMES1_Dc", "BOND1_Dc", "AR8438922", "Abovyan 2");
+         */
+        Programmer programmer = new Programmer("FEMALE", 56, "JAMES1_Pr", "BOND1_Pr", "AR8438922", "Abovyan 2");
+//        Programmer.Details details = programmer.new Details();
+//
+//        details.printName();
+
+//        Programmer.Details details = new Programmer.Details();
+
+        Car car = programmer.abc();
+
+        car.drive();
+        car.work();
     }
 }

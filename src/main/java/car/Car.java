@@ -5,6 +5,9 @@ import java.awt.*;
 public abstract class Car {
 
     private Color color;
+
+    public Car(){}
+
     public Car(Color color) {
         this.color = color;
     }
